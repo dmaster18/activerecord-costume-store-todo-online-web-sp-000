@@ -2,7 +2,7 @@
 
 class ModifyCostumeStores < ActiveRecord::Migration[5.1]
   def change
-    create_table :costume_stores do |t|
+    rename_column :Costume, :old_column, :new_column
       t.string :name
       t.string :location
       t.integer :costume_inventory
@@ -10,6 +10,5 @@ class ModifyCostumeStores < ActiveRecord::Migration[5.1]
       t.boolean :still_in_business
       t.datetime :opening_time
       t.datetime :closing_time
-    end
   end
 end
