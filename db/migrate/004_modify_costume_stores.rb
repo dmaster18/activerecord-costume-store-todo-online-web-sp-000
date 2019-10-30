@@ -2,7 +2,7 @@
 
 class ModifyCostumeStores < ActiveRecord::Migration[5.1]
   def change
-    rename_column :Costume, :old_column, :new_column
+    rename_column :Cost, :old_column, :new_column
       t.string :name
       t.string :location
       t.integer :costume_inventory
